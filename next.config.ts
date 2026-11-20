@@ -6,14 +6,15 @@ import {
 } from "./scripts/locale-routes.ts";
 
 /**
- * The address Web Studio shows the dev server at: Next.js refuses its dev
- * resources to any origin it was not told about.
+ * The host Web Studio shows the dev server under (each preview is a
+ * subdomain of it): Next.js refuses its dev resources to any origin it was
+ * not told about.
  */
-const previewHosts = process.env.__VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS;
+const previewHost = process.env.LAZINESS_PREVIEW_HOST;
 
 const config: NextConfig = {
 	reactCompiler: true,
-	allowedDevOrigins: previewHosts ? [`*${previewHosts}`] : [],
+	allowedDevOrigins: previewHost ? [`*.${previewHost}`] : [],
 };
 
 export default function nextConfig(phase: string): NextConfig {
