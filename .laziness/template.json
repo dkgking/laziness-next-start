@@ -1,0 +1,47 @@
+{
+	"name": "Next.js app",
+	"description": "A server-rendered Next.js app (App Router) for anything with data: Server Components that read it, Server Actions with zod that change it, Tailwind CSS, and translations ready for more languages. The demo is removed when your app is built. Deploys to Vercel, Node, Netlify, or Cloudflare.",
+	"image": ".laziness/cover.png",
+	"tags": [
+		"app",
+		"ssr",
+		"react",
+		"nextjs"
+	],
+	"prompts": [
+		"A booking app where customers pick a date and time slot",
+		"An expense tracker with categories and monthly totals",
+		"A feedback board where users post ideas and vote on them",
+		"An admin dashboard with stats cards and a searchable table"
+	],
+	"locale": "en",
+	"setup": {
+		"questions": [
+			{
+				"id": "locales",
+				"header": "Languages",
+				"question": "Which languages should the site have?",
+				"multiSelect": true,
+				"options": [
+					{
+						"label": "English only",
+						"description": "Add more later by asking"
+					},
+					{
+						"label": "Vietnamese",
+						"description": "vi"
+					},
+					{
+						"label": "Japanese",
+						"description": "ja"
+					},
+					{
+						"label": "Chinese",
+						"description": "zh"
+					}
+				]
+			}
+		],
+		"instructions": "`locales`: the app starts in English. For every other language picked or typed, add it with the add-locale skill (two-letter codes only: vi, ja, zh, ...); for \"English only\" change nothing."
+	}
+}

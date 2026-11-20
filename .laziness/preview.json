@@ -1,0 +1,9 @@
+{
+	"kind": "server",
+	"install": "bun install",
+	"build": "bun run build",
+	"start": "node_modules/.bin/next start -H 0.0.0.0 -p $PORT",
+	"live": {
+		"start": "node_modules/.bin/next dev -H 0.0.0.0 -p $PORT"
+	}
+}

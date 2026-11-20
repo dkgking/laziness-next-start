@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+.next
+out
+*.local
+.env
+.env.*
+!.env.example
+next-env.d.ts
+*.tsbuildinfo
+.vercel
+src/locales/*.js
+src/app/\[locale\]
